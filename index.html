@@ -1,7 +1,562 @@
 <!DOCTYPE html>
-<html>
-<head><title>Hello</title></head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Large Windows & Doors: Transforming Your Home with Light and Space</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Georgia', serif;
+      background: #f9f7f4;
+      color: #2c2c2c;
+      line-height: 1.8;
+    }
+
+    /* Header */
+    header {
+      background: #1a1a1a;
+      color: #fff;
+      padding: 0;
+    }
+
+    .site-name {
+      text-align: center;
+      padding: 18px 24px 14px;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 13px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: #aaa;
+      border-bottom: 1px solid #333;
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(160deg, #1b2a3b 0%, #2e4a62 50%, #3d6b8a 100%);
+      color: #fff;
+      padding: 100px 24px 90px;
+      text-align: center;
+    }
+
+    .hero-tag {
+      display: inline-block;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #93c5e8;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      font-weight: normal;
+      line-height: 1.2;
+      max-width: 720px;
+      margin: 0 auto 24px;
+      letter-spacing: -0.5px;
+    }
+
+    .hero-sub {
+      font-size: 1.15rem;
+      color: #b8d4e8;
+      max-width: 560px;
+      margin: 0 auto 36px;
+      font-style: italic;
+    }
+
+    .meta {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 13px;
+      color: #7aaac8;
+      letter-spacing: 1px;
+    }
+
+    /* Article body */
+    .article-wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .lead {
+      font-size: 1.25rem;
+      color: #444;
+      margin: 60px 0 40px;
+      line-height: 1.9;
+      border-left: 4px solid #2e4a62;
+      padding-left: 24px;
+      font-style: italic;
+    }
+
+    p {
+      margin-bottom: 1.6rem;
+      font-size: 1.05rem;
+      color: #3a3a3a;
+    }
+
+    h2 {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 1.55rem;
+      font-weight: 600;
+      color: #1b2a3b;
+      margin: 56px 0 18px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #e0ddd8;
+      letter-spacing: -0.3px;
+    }
+
+    h3 {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #2e4a62;
+      margin: 32px 0 10px;
+      letter-spacing: 0.2px;
+    }
+
+    /* Pull quote */
+    blockquote {
+      margin: 48px 0;
+      padding: 32px 36px;
+      background: #1b2a3b;
+      color: #d8eaf5;
+      font-size: 1.35rem;
+      font-style: italic;
+      line-height: 1.6;
+      border-radius: 4px;
+      position: relative;
+    }
+
+    blockquote::before {
+      content: '\201C';
+      font-size: 5rem;
+      color: #3d6b8a;
+      position: absolute;
+      top: -10px;
+      left: 20px;
+      line-height: 1;
+    }
+
+    /* Feature cards */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin: 36px 0 48px;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid #e0ddd8;
+      border-radius: 6px;
+      padding: 24px 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .card-icon {
+      font-size: 2rem;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .card h4 {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #1b2a3b;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .card p {
+      font-size: 0.92rem;
+      color: #666;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    /* Comparison table */
+    .table-wrap {
+      overflow-x: auto;
+      margin: 32px 0 48px;
+      border-radius: 6px;
+      border: 1px solid #ddd;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 0.95rem;
+    }
+
+    thead {
+      background: #1b2a3b;
+      color: #fff;
+    }
+
+    th {
+      padding: 14px 18px;
+      text-align: left;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    td {
+      padding: 13px 18px;
+      border-bottom: 1px solid #eee;
+      color: #444;
+    }
+
+    tr:last-child td { border-bottom: none; }
+    tr:nth-child(even) { background: #f9f7f4; }
+
+    .check { color: #2e8b57; font-weight: bold; }
+    .cross  { color: #b03a2e; font-weight: bold; }
+
+    /* Tips list */
+    .tips {
+      list-style: none;
+      margin: 24px 0 40px;
+      padding: 0;
+    }
+
+    .tips li {
+      padding: 14px 16px 14px 48px;
+      position: relative;
+      background: #fff;
+      border-radius: 4px;
+      border-left: 3px solid #2e4a62;
+      margin-bottom: 12px;
+      font-size: 1rem;
+      color: #3a3a3a;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    }
+
+    .tips li::before {
+      content: counter(tip);
+      counter-increment: tip;
+      position: absolute;
+      left: 14px;
+      top: 14px;
+      background: #2e4a62;
+      color: #fff;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      font-size: 12px;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .tips { counter-reset: tip; }
+
+    /* Divider */
+    .divider {
+      text-align: center;
+      margin: 48px 0;
+      color: #bbb;
+      letter-spacing: 8px;
+      font-size: 0.8rem;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 80px;
+      background: #1a1a1a;
+      color: #888;
+      text-align: center;
+      padding: 36px 24px;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+
+    footer span { color: #555; margin: 0 8px; }
+  </style>
+</head>
 <body>
-  <p>hello there</p>
+
+  <header>
+    <div class="site-name">The Architecture Home Review</div>
+  </header>
+
+  <div class="hero">
+    <span class="hero-tag">Home Design &nbsp;&bull;&nbsp; Architecture</span>
+    <h1>Large Windows &amp; Doors: How to Flood Your Home with Light and Space</h1>
+    <p class="hero-sub">A complete guide to choosing, placing, and living with oversized glazing in modern residential design.</p>
+    <div class="meta">March 26, 2026 &nbsp;&bull;&nbsp; 9 min read</div>
+  </div>
+
+  <div class="article-wrap">
+
+    <p class="lead">
+      There is a moment, standing inside a home wrapped in floor-to-ceiling glass, when the boundary between inside and outside simply dissolves. Large windows and doors do not merely let in light — they redefine the architecture of daily life.
+    </p>
+
+    <p>
+      Over the last decade, oversized glazing has shifted from a luxury reserved for high-end custom homes to an accessible design choice for renovations, new builds, and even modest-budget projects. Advances in thermal performance, structural framing, and glass coating technology have made it easier than ever to go big — without sacrificing energy efficiency or comfort.
+    </p>
+
+    <p>
+      Whether you are planning a full renovation, adding a rear extension, or simply replacing tired single-hung windows with something more dramatic, this guide will walk you through everything you need to know.
+    </p>
+
+    <h2>Why Go Large? The Case for Oversized Glazing</h2>
+
+    <p>
+      The benefits of large windows and doors extend well beyond aesthetics. Natural light has a measurable impact on mood, productivity, and even sleep quality. Studies consistently show that people in daylit spaces report higher wellbeing scores and lower levels of fatigue than those in artificially lit environments.
+    </p>
+
+    <div class="card-grid">
+      <div class="card">
+        <span class="card-icon">☀️</span>
+        <h4>Natural Light</h4>
+        <p>Reduces reliance on artificial lighting and supports healthy circadian rhythms.</p>
+      </div>
+      <div class="card">
+        <span class="card-icon">🏡</span>
+        <h4>Perceived Space</h4>
+        <p>Visual connection to the outdoors makes rooms feel significantly larger than their footprint.</p>
+      </div>
+      <div class="card">
+        <span class="card-icon">🌿</span>
+        <h4>Indoor-Outdoor Flow</h4>
+        <p>Wide door openings blur the boundary between living space and garden or terrace.</p>
+      </div>
+      <div class="card">
+        <span class="card-icon">📈</span>
+        <h4>Property Value</h4>
+        <p>Glazed extensions and feature windows consistently rank among the top value-adding renovations.</p>
+      </div>
+    </div>
+
+    <blockquote>
+      The most successful homes I have designed treat glass not as a material, but as a strategy — a deliberate decision about how people will inhabit and experience a space.
+    </blockquote>
+
+    <h2>Types of Large Windows</h2>
+
+    <p>
+      Not all oversized windows serve the same purpose. The right choice depends on your home's orientation, the room's function, your climate, and the architectural style you're working within.
+    </p>
+
+    <h3>Floor-to-Ceiling Fixed Panes</h3>
+    <p>
+      The most dramatic option, fixed panes run from the floor slab (or just above the skirting) to the ceiling. They maximise light and views but offer no ventilation. Best used in combination with operable windows or a door on an adjacent wall.
+    </p>
+
+    <h3>Casement and Awning Windows</h3>
+    <p>
+      Casement windows swing outward on a side hinge; awning windows hinge at the top. Both can be made very large (up to 1.8m wide in quality aluminium or timber frames) and provide excellent ventilation. A row of large casements across a rear elevation creates a striking, contemporary look.
+    </p>
+
+    <h3>Corner Windows</h3>
+    <p>
+      Eliminating the structural corner post, corner windows wrap the glazing around an external corner of the room. The effect is extraordinary — the room appears to float, anchored to nothing. Structurally more demanding and costly, but among the most impactful choices in residential architecture.
+    </p>
+
+    <h3>Skylights and Roof Glazing</h3>
+    <p>
+      Where wall space is limited, the ceiling becomes the canvas. A large rooflight above a kitchen island or stairwell can transform a dark interior room into one of the brightest in the house. Flat-roof extensions with fully glazed roofs — often called lantern roofs — have become a hallmark of contemporary British and European extensions.
+    </p>
+
+    <h2>Types of Large Doors</h2>
+
+    <p>
+      Large doors, particularly those connecting interior living spaces to an outdoor area, are where many homeowners see the single greatest transformation to how they use their home.
+    </p>
+
+    <h3>Bi-Fold Doors</h3>
+    <p>
+      Bi-fold doors consist of multiple panels that fold back on themselves, stacking to one or both sides of the opening. A four- or six-panel bi-fold can open a living room wall entirely to a garden or terrace. They are the most popular choice for rear extensions in the UK and Australia and work well in most climates with proper weatherstripping.
+    </p>
+
+    <h3>Sliding Doors</h3>
+    <p>
+      Sliding doors glide on a track rather than folding. They require less swing space and operate more simply, making them a strong choice for contemporary homes with tight floor plans. Lift-and-slide systems from European manufacturers can span extraordinary widths — up to 6 metres and beyond — with minimal visible framing.
+    </p>
+
+    <h3>Pivot Doors</h3>
+    <p>
+      A pivot door rotates on a central or off-centre vertical axis rather than hinging at the edge. Oversized pivot doors — often two to three metres tall and a metre wide — make a bold architectural statement at an entry. The hardware is visible and intentional, becoming a design feature in itself.
+    </p>
+
+    <h3>Steel-Framed Crittal-Style Doors</h3>
+    <p>
+      Thin steel profiles allow maximum glass area with a distinctly industrial character. Originally found in early twentieth-century factories and hospitals, crittal-style glazing has become enormously fashionable in residential interiors and extensions. The frames can be painted any colour; black is by far the most popular choice.
+    </p>
+
+    <div class="divider">&#9670; &nbsp; &#9670; &nbsp; &#9670;</div>
+
+    <h2>Frame Materials: A Comparison</h2>
+
+    <p>
+      Your choice of frame material affects aesthetics, performance, maintenance, and cost — often significantly. Here is how the main options compare.
+    </p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Material</th>
+            <th>Thermal Performance</th>
+            <th>Slim Sightlines</th>
+            <th>Low Maintenance</th>
+            <th>Relative Cost</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>uPVC</strong></td>
+            <td><span class="check">✓ Excellent</span></td>
+            <td><span class="cross">✗ Bulkier</span></td>
+            <td><span class="check">✓ Yes</span></td>
+            <td>$</td>
+          </tr>
+          <tr>
+            <td><strong>Aluminium</strong></td>
+            <td><span class="check">✓ Very Good</span></td>
+            <td><span class="check">✓ Slim</span></td>
+            <td><span class="check">✓ Yes</span></td>
+            <td>$$</td>
+          </tr>
+          <tr>
+            <td><strong>Timber</strong></td>
+            <td><span class="check">✓ Very Good</span></td>
+            <td><span class="check">✓ Slim</span></td>
+            <td><span class="cross">✗ Requires upkeep</span></td>
+            <td>$$$</td>
+          </tr>
+          <tr>
+            <td><strong>Steel / Crittal</strong></td>
+            <td><span class="cross">✗ Variable</span></td>
+            <td><span class="check">✓ Thinnest</span></td>
+            <td><span class="cross">✗ Painting required</span></td>
+            <td>$$$$</td>
+          </tr>
+          <tr>
+            <td><strong>Timber-Aluminium</strong></td>
+            <td><span class="check">✓ Excellent</span></td>
+            <td><span class="check">✓ Slim</span></td>
+            <td><span class="check">✓ Yes (exterior)</span></td>
+            <td>$$$$</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Getting the Most from Your Glazing: Practical Tips</h2>
+
+    <p>
+      Choosing large windows and doors is only part of the equation. How you position, specify, and detail them makes the difference between a house that feels inspired and one that is simply expensive.
+    </p>
+
+    <ul class="tips">
+      <li>Orient the largest glazed elevations to the south (in the northern hemisphere) or north (in the southern hemisphere) for maximum passive solar gain in winter, and use overhangs or external blinds to control summer overheating.</li>
+      <li>Specify triple glazing for any window facing a prevailing cold wind, particularly in northern climates. The additional cost is typically recovered in heating bills within five to seven years.</li>
+      <li>Use low-iron glass for the clearest, most colour-neutral views. Standard float glass has a greenish tint that becomes apparent at scale and can affect how the interior feels.</li>
+      <li>Keep mullion profiles as thin as possible. The frame is the one part of a large window that does not help you — minimise it wherever structural loadings allow.</li>
+      <li>Consider external solar shading — pergolas, louvres, or overhanging eaves — before relying on internal blinds. External shading stops heat before it enters the glass; internal blinds trap it inside.</li>
+      <li>For large sliding or bi-fold door openings, specify a continuous flush threshold detail. A low or flush sill eliminates the trip hazard and reinforces the visual connection between interior and exterior floors.</li>
+      <li>Integrate ventilation from the start of the design process. Very large fixed panes are beautiful, but a room with no openable windows can feel stuffy in warm weather regardless of how much light it receives.</li>
+    </ul>
+
+    <h2>Energy Efficiency and Building Regulations</h2>
+
+    <p>
+      It is a common misconception that large glazed areas are inherently energy-inefficient. In a well-designed home, south-facing glazing can contribute meaningfully to passive solar heating, reducing heating loads during winter. The key is balance: large windows require correspondingly high levels of wall and roof insulation to maintain an efficient building envelope overall.
+    </p>
+
+    <p>
+      Building codes in most countries set minimum glazing performance standards — typically expressed as a U-value (the rate of heat transfer). Most jurisdictions require window U-values of 1.4 W/m²K or better for new builds, with high-performance triple-glazed units achieving 0.6 W/m²K or lower. Always confirm current local requirements with your architect or building control officer before specifying glazing for a new project.
+    </p>
+
+    <blockquote>
+      Glass is the most honest of building materials. It conceals nothing — neither the beauty of what lies beyond it, nor the carelessness of a poor installation detail.
+    </blockquote>
+
+    <h2>Budget Guidance</h2>
+
+    <p>
+      Costs vary enormously by size, material, glazing specification, and complexity of installation. As a rough reference for US and UK markets as of 2026:
+    </p>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th>Typical Width</th>
+            <th>Budget Range (supply &amp; fit)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Large aluminium casement window</td>
+            <td>1.2 – 1.8 m</td>
+            <td>$1,200 – $3,500</td>
+          </tr>
+          <tr>
+            <td>Floor-to-ceiling fixed pane</td>
+            <td>1.0 – 2.4 m</td>
+            <td>$2,000 – $6,000</td>
+          </tr>
+          <tr>
+            <td>Bi-fold door system (4 panels)</td>
+            <td>3.0 – 4.0 m</td>
+            <td>$5,000 – $14,000</td>
+          </tr>
+          <tr>
+            <td>Lift-and-slide door system</td>
+            <td>3.0 – 6.0 m</td>
+            <td>$8,000 – $22,000+</td>
+          </tr>
+          <tr>
+            <td>Oversized pivot entrance door</td>
+            <td>0.9 – 1.2 m</td>
+            <td>$4,000 – $15,000</td>
+          </tr>
+          <tr>
+            <td>Roof lantern / flat-roof glazing</td>
+            <td>1.5 – 4.0 m</td>
+            <td>$3,500 – $18,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      Structural work — removing load-bearing walls, installing steel beams, or underpinning foundations — adds cost on top of these figures and should always be assessed by a structural engineer before work begins.
+    </p>
+
+    <h2>Final Thoughts</h2>
+
+    <p>
+      Large windows and doors represent one of the most powerful investments you can make in a home — not simply as a financial asset, but as a daily lived experience. The quality of morning light across a kitchen floor, the seamless step from a living room to a summer terrace, the sense of connection to sky and garden through a well-placed rooflight: these are the things that make a house feel genuinely worth living in.
+    </p>
+
+    <p>
+      Approach the decision carefully, work with a skilled designer, specify for your climate rather than a magazine photograph, and do not be afraid to go bigger than feels comfortable on paper. In glazing, as in many aspects of architecture, boldness usually wins.
+    </p>
+
+  </div>
+
+  <footer>
+    The Architecture Home Review
+    <span>&bull;</span>
+    Home Design &amp; Architecture
+    <span>&bull;</span>
+    &copy; 2026
+  </footer>
+
 </body>
 </html>
